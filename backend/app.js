@@ -56,6 +56,8 @@ app.use(requestLogger);
 app.use(cors({
   origin: allowedCors,
   method: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  preflightContinue: false,
   credentials: true,
 }));
 
