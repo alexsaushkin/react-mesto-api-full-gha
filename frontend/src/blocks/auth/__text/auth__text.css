@@ -1,0 +1,20 @@
+.auth__text {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #ccc;
+  box-sizing: content-box;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  padding-bottom: 10px;
+  background-color : #000;
+  color: #fff;
+}
+
+.auth__text:focus {
+  outline: none;
+}
+
+.auth__text::placeholder {
+  color: #ccc;
+}

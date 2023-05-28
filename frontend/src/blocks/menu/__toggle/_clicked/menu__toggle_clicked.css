@@ -1,0 +1,13 @@
+.menu__toggle_clicked::before {
+  margin-top: 0;
+  transform: rotate(405deg);
+}
+
+.menu__toggle_clicked {
+  background: rgba(255, 255, 255, 0);
+}
+
+.menu__toggle_clicked::after {
+  margin-top: 0;
+  transform: rotate(-405deg);
+}

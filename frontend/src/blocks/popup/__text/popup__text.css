@@ -1,0 +1,19 @@
+.popup__text {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #d3d3d3;
+  box-sizing: content-box;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  padding-bottom: 10px;
+}
+
+.popup__text:focus {
+  outline: none;
+}
+
+.popup__text::placeholder {
+  color: #d3d3d3;
+}

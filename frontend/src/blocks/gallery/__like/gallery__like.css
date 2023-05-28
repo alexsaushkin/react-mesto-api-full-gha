@@ -1,0 +1,17 @@
+.gallery__like {
+  min-width: 22px;
+  height: 19px;
+  border: 0;
+  background-color: #fff;
+  background-image: url("../../../images/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: opacity 0.3s ease-in;
+  cursor: pointer;
+  margin-bottom: 3px;
+}
+
+.gallery__like:hover {
+  opacity: 0.5;
+}

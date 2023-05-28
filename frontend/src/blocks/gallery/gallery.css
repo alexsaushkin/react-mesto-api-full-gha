@@ -1,0 +1,12 @@
+.gallery {
+  color: #000;
+  max-width: 880px;
+  padding-top: 51px;
+}
+
+@media screen and (max-width: 767px) {
+  .gallery {
+    padding-top: 36px;
+  }
+}
+

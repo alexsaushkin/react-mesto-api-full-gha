@@ -1,0 +1,9 @@
+.menu__item {
+  text-decoration: none;
+  color: #fff;
+  transition: opacity 0.3s ease-in;
+}
+
+.menu__item:hover {
+  opacity: 0.6;
+}

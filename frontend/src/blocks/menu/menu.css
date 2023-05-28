@@ -1,0 +1,16 @@
+.menu {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  text-align: right;
+  height: 24px;
+}
+
+@media screen and (max-width: 984px) {
+  .menu {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

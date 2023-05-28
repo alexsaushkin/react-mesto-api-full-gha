@@ -1,0 +1,20 @@
+.menu__toggle-container {
+  display: none;
+  height: 100%;
+  width: 24px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in;
+}
+
+.menu__toggle-container:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 568px) {
+  .menu__toggle-container {
+    display: flex;
+  }
+}

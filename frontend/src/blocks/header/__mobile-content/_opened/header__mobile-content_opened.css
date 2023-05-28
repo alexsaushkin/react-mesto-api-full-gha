@@ -1,0 +1,6 @@
+@media screen and (max-width: 568px) {
+  .header__mobile-content_opened {
+    height: 142px;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
