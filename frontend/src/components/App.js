@@ -81,6 +81,7 @@ function App() {
   async function checkToken() {
     try {
       const jwt = localStorage.getItem(JWT_KEY);
+      console.log('jwt', jwt)
       if (!jwt) {
         throw new Error('no token');
       }
