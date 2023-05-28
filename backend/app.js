@@ -1,6 +1,8 @@
 const express = require('express');
+require('dotenv').config();
 const mongoose = require('mongoose');
 const helmet = require('helmet');
+const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 const { errors } = require('celebrate');
 const process = require('process');
@@ -36,10 +38,33 @@ mongoose.connect(DB_CONNECT, {
   useNewUrlParser: true,
 });
 
+const allowedCors = [
+  'https://thirdyou.nomoredomains.rocks',
+  'http://thirdyou.nomoredomains.rocks',
+  'https://api.thirdyou.nomoredomains.rocks',
+  'http://api.thirdyou.nomoredomains.rocks',
+  'http://localhost:3000',
+  'https://158.160.101.153',
+  'http://158.160.101.153',
+];
+
 app.use(helmet());
 app.use(express.json());
 app.use(limiter);
 app.use(requestLogger);
+
+app.use(cors({
+  origin: allowedCors,
+  method: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+  credentials: true,
+}));
+
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
+
 app.post('/signin', validateLogin, login);
 app.post('/signup', validateCreate, createUser);
 
