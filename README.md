@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес <158.160.101.153>
+IP <158.160.101.153>
 
 Frontend https://thirdyou.nomoredomains.rocks/
 
