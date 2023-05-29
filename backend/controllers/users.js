@@ -89,6 +89,7 @@ module.exports.updateProfile = (req, res, next) => {
       runValidators: true,
     },
   )
+    .orFail()
     .then((user) => res.send({ data: user }))
     .catch((err) => {
       if (err.name === 'DocumentNotFoundError') {
@@ -114,6 +115,7 @@ module.exports.updateAvatar = (req, res, next) => {
       runValidators: true,
     },
   )
+    .orFail()
     .then((user) => res.send({ data: user }))
     .catch((err) => {
       if (err.name === 'DocumentNotFoundError') {
